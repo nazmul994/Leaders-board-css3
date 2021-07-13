@@ -1,0 +1,183 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* navigation bar */
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3b3bff;
+    padding: 16px;
+    
+}
+
+.lite-icon img{
+    width: 50px;
+}
+
+.anchor{
+    font-size: 24px;
+    font-weight: 200;
+    padding-left: 20px;
+    color: white;
+}
+
+/* common style or utility */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaf1ff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 870px;
+    padding: 35px;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+/* top players style */
+
+.section-title{
+    color: blue;
+    font-size: 24px;
+    margin-top: 3px;
+}
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.player img{
+    width: 56px;
+    height: 56px;
+}
+.player-name{
+    padding-left: 18px;
+    font-size: 20px;
+}
+hr{
+    border: 1px solid gainsboro;
+    margin-bottom: 30px;
+}
+/*--------------------------------------------
+this area about top blog style
+-------------------------------------------- */
+.blogs{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-row-gap: 30px;
+     grid-column-gap: 24px;
+}
+
+.blog{
+   display: flex;
+}
+
+.thumbnail img{
+    width: 170px;
+    height: 117px;
+    margin-top: 10px;
+}
+.blog-info {
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+    color: black;
+} 
+.blog-author a{
+    text-decoration: none;
+    font-size: 16px;
+    color: blue;
+}
+/* -------------------------------
+          course styles 
+----------------------------------*/
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.course{
+
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.1);
+    
+}
+.course-banner img{
+    width: 100%;
+}
+
+.course-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-star{
+    font-size: 12px;
+}
+
+.course-durations{
+    background-color: #ffcbcb;
+    border-radius: 80px;
+    width: 87px;
+    color: red;
+    padding-left: 17px;
+}
+
+.fa-star.filled{
+    color: gold;
+}
+
+.fa-star.empty{
+    color: #d3d3d3;
+}
+
+/* --------------------------------
+          Media quary      
+------------------------------------*/
+/* Mobail Devices */
+
+@media only screen and (max-width:688px ) {
+    .container{
+      width: 100%;
+    }
+    .players,  .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog {
+        flex-direction: column;
+    }
+}
+/* tablet devices */
+@media only screen and(min-width: 688px ) and (max-width: 992px ) {
+     
+    .container{
+        width: 100%;
+    }
+    .players,  .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
